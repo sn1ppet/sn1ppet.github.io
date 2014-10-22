@@ -44,23 +44,32 @@ $(document).ready(function() {
     }
   ];
 
-  $('#search').typeahead({
-    hint: true,
-    highlight: true,
-    minLength: 1
-  },
-  {
-    name: 'snippets',
-    displayKey: 'value',
-    source: substringMatcher(snippets),
-    templates: {
-    empty: [
-      '<div class="empty-message">',
-      'Feel free to <a href="https://github.com/yannickoo/snippets/compare/">submit</a> a snippet.',
-      '</div>'
-    ].join('\n'),
-    suggestion: Handlebars.compile('<p><strong>{{value}}</strong> – {{category}}</p>')
-  }
-  });
+  $('#search')
+    .typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+    },
+    {
+      name: 'snippets',
+      displayKey: 'value',
+      source: substringMatcher(snippets),
+      templates: {
+        empty: [
+          '<div class="empty-message">',
+          'Feel free to <a href="https://github.com/yannickoo/snippets/compare/">submit</a> a snippet.',
+          '</div>'
+        ].join('\n'),
+        suggestion: Handlebars.compile('<p><strong>{{value}}</strong> – {{category}}</p>'),
+        itemSelected: function(e) {
+          console.log(e);
+        }
+      }
+    })
+    .bind('typeahead:selected', function(obj, datum, name) {
+      if (typeof datum.url !== 'undefined') {
+        location.href = location.protocol + '//' + location.host + location.pathname + datum.url;
+      }
+    });
 
 });
