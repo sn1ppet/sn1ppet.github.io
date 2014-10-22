@@ -1,0 +1,17 @@
+---
+published: true
+layout: post
+---
+Great for starting with new JavaScript file.
+
+{% highlight js lineos %}
+  (function ($) {
+
+    Drupal.behaviors.namespace = {
+      attach: function (context, settings) {
+        // TODO: Write code
+      }
+    };
+
+  })(jQuery);
+{% endhighlight %}
