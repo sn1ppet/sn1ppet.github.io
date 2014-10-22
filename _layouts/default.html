@@ -17,7 +17,8 @@
   <body class="{% if page.url == '/index.html' %}front{% endif %}">
     <nav>
       <ul>
-        <li><a href="{{ site.baseurl }}/recent">Recent</a></li>
+        <li><a href="{{ site.baseurl }}/" class="{% if page.url == '/index.html' %}current{% endif %}">Search</a></li>
+        <li><a href="{{ site.baseurl }}/recent" class="{% if page.url == '/recent.html' %}current{% endif %}">Recent</a></li>
       </ul>
     </nav>
 
