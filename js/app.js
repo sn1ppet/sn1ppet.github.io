@@ -35,7 +35,8 @@ $(document).ready(function() {
     },
     {
       value: 'drupal behaviors',
-      category: 'Drupal'
+      category: 'Drupal',
+      url: '2014/10/21/drupal-behaviors.html'
     },
     {
       value: 'vertical align',
