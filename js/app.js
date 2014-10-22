@@ -12,11 +12,11 @@ $(document).ready(function() {
 
       // iterate through the pool of strings and for any string that
       // contains the substring `q`, add it to the `matches` array
-      $.each(strs, function(i, str) {
-        if (substrRegex.test(str)) {
+      $.each(strs, function(i, obj) {
+        if (substrRegex.test(obj.value) || substrRegex.test(obj.category)) {
           // the typeahead jQuery plugin expects suggestions to a
           // JavaScript object, refer to typeahead docs for more info
-          matches.push({ value: str });
+          matches.push(obj);
         }
       });
 
@@ -24,11 +24,23 @@ $(document).ready(function() {
     };
   };
 
-  var states = [
-    'hook_page_build',
-    'hook_form_alter',
-    'drupal behaviors',
-    'vertical align'
+  var snippets = [
+    {
+      value: 'hook_page_build',
+      category: 'Drupal'
+    },
+    {
+      value: 'hook_form_alter',
+      category: 'Drupal'
+    },
+    {
+      value: 'drupal behaviors',
+      category: 'Drupal'
+    },
+    {
+      value: 'vertical align',
+      category: 'CSS'
+    }
   ];
 
   $('#search').typeahead({
@@ -37,9 +49,17 @@ $(document).ready(function() {
     minLength: 1
   },
   {
-    name: 'states',
+    name: 'snippets',
     displayKey: 'value',
-    source: substringMatcher(states)
+    source: substringMatcher(snippets),
+    templates: {
+    empty: [
+      '<div class="empty-message">',
+      'Feel free to <a href="https://github.com/yannickoo/snippets/compare/">submit</a> a snippet.',
+      '</div>'
+    ].join('\n'),
+    suggestion: Handlebars.compile('<p><strong>{{value}}</strong> – {{category}}</p>')
+  }
   });
 
 });
