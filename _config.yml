@@ -1,5 +1,6 @@
 name: Snippets
 baseurl: "/snippets"
+permalink: none
 
 sass:
   sass_dir: _sass
