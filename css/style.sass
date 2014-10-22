@@ -7,11 +7,38 @@ body
   letter-spacing: -1px
 
 main
+  display: inline-block
+
   width: 100%
   max-width: 960px
-  margin: auto
+
+  margin: 0 auto
+  padding: 1em 0.3em 3.5em
+  vertical-align: middle
+
   text-align: left
 
+  white-space: normal
+
+footer
+  position: fixed
+
+  height: 2.5em
+
+  bottom: 0
+  left: 0
+
+  width: 100%
+
+  line-height: 2.5em
+  color: #fff
+
+  background: rgba(0, 0, 0, 0.9)
+
+  h1
+    display: inline
+
+// Typography
 a
   color: #000
   text-decoration: none
@@ -29,6 +56,32 @@ nav
   > ul
     list-style-type: none
     padding-left: 1em
+
+h1
+  font-size: 1em
+
+p
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+// Center page
+html, body
+  height: 100%
+  margin: 0
+  text-align: center
+  white-space: nowrap
+
+body > *
+  white-space: normal
+
+body:before
+  content: ''
+  display: inline-block
+  height: 100%
+  width: 0
+  vertical-align: middle
 
 @import "front"
 @import "typehead"

@@ -14,7 +14,7 @@
     <script src="{{ site.baseurl }}/js/app.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
   </head>
-  <body>
+  <body class="{% if page.url == '/index.html' %}front{% endif %}">
     <nav>
       <ul>
         <li><a href="{{ site.baseurl }}/recent">Recent</a></li>
