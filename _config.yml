@@ -1,4 +1,5 @@
 name: Snippets
+baseurl: "/snippets"
 
 sass:
   sass_dir: _sass
