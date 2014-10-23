@@ -5,6 +5,8 @@
   {
     "title": "{{ post.title }}",
     "category": "{{ post.category }}",
+    "date": "{{ post.date }}",
+    "time": "{{ post.time }}",
     "url": "{{ post.url }}"
   }{% if forloop.last %}{% else %},{% endif %}
 {% endfor %}]

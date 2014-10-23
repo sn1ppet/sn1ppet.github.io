@@ -2,9 +2,16 @@
 layout: default
 title: Recent snippets
 ---
-
+<h1>Recent snippets:</h1>
 <ul>
+  {% assign current_date = none %}
   {% for post in site.posts %}
+    {% if current_date != post.date %}
+      {% assign current_date = post.date %}
+      </ul>
+        <strong>{{post.date | date_to_long_string}}</strong>
+      <ul>
+    {% endif %}
     <li>
       <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </li>
