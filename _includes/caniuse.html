@@ -1,0 +1,6 @@
+{% assign feature_list = include.features | split:"+" %}
+<div class="caniuse-wrapper">
+  {% for feature in feature_list %}
+    <div class="caniuse" data-feature="{{ feature }}"></div>
+  {% endfor %}
+</div>

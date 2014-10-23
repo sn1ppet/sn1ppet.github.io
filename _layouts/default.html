@@ -7,12 +7,8 @@
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/caniuse-widget/css/caniuse.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/typeahead.bundle.min.js"></script>
-    <script src="{{ site.baseurl }}/js/app.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
   </head>
   <body class="{% if page.url == '/index.html' %}front{% endif %}">
     <nav>
@@ -29,5 +25,12 @@
     <footer>
       <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
     </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/typeahead.bundle.min.js"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="{{ site.baseurl }}/lib/caniuse-widget/js/caniuse.js"></script>
+    <script src="{{ site.baseurl }}/js/app.js"></script>
   </body>
 </html>
