@@ -1,3 +1,0 @@
-[submodule "lib/caniuse-widget"]
-	path = lib/caniuse-widget
-	url = https://github.com/andismith/caniuse-widget.git
