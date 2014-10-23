@@ -1,0 +1,3 @@
+[submodule "lib/caniuse-widget"]
+	path = lib/caniuse-widget
+	url = git@github.com:axe312ger/caniuse-widget.git
