@@ -15,7 +15,8 @@
 .caniuse h4,
 .caniuse p {
   line-height: 1.4;
-  margin: 0.3em 0;
+  margin: 5px;
+  text-align: center;
 }
 .caniuse h1 {
   font-size: 1.8em;
@@ -39,10 +40,12 @@
   overflow: hidden;
   width: auto;
   list-style-type: none;
-  margin: 0 0 0.3em;
+  margin: 0;
   overflow: auto;
   padding: 0;
   width: auto;
+  margin: 0 auto;
+  max-width: 400px;
 }
 .caniuse .agents > li,
 .caniuse .legend > li {
@@ -52,9 +55,10 @@
 .caniuse .legend li {
   box-shadow: inset 0 -5px 2px rgba(175, 175, 195, 0.02);
   float: left;
-  margin-right: 0.3em;
-  padding: 0.5em;
+  margin-right: 1.2024048096192386%;
+  padding: 5px 0;
   text-align: center;
+  width: 19.03807615230461%;
 }
 .caniuse .agents li.y,
 .caniuse .legend li.y,
@@ -83,7 +87,7 @@
   margin-right: 0;
 }
 .caniuse .agents li {
-  font-size: 0.5em;
+  font-size: 1em;
   /* android */
 
   /* chrome */
