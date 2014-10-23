@@ -2,6 +2,7 @@
 published: true
 layout: post
 category: css
+tags: [responsive, css]
 ---
 Force a dom element to keep a specified aspect ratio. This is very helpful in responsive design.
 
@@ -62,5 +63,14 @@ Resize the page to see it in action.
   width: 100%;
   height: 0;
   padding-bottom: #{$gap + "%"};
+}
+
+// Shorthand mixin for the child element.
+@mixin fill-parent() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 {% endhighlight %}
