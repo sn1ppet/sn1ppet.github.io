@@ -5,7 +5,7 @@ $(document).ready(function() {
   var snippets = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
-    prefetch: basePath + 'api/snippets.json'
+    prefetch: basePath + '/api/snippets.json'
   });
 
   snippets.initialize();
