@@ -7,14 +7,19 @@
     <meta name="description" content="{{ site.description }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <link rel="stylesheet" href="{{ site.baseurl }}/lib/caniuse-widget/css/caniuse.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+    <link rel="stylesheet" href="{{ "/lib/caniuse-widget/css/caniuse.css" | grepend: site.baseurl }}>
+    <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/typeahead.bundle.min.js"></script>
+    <script src="{{ "/js/app.js" | prepend: site.baseurl }}"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
   </head>
   <body class="{% if page.url == '/index.html' %}front{% endif %}">
     <nav>
       <ul>
-        <li><a href="{{ site.baseurl }}/" class="{% if page.url == '/index.html' %}current{% endif %}">Search</a></li>
-        <li><a href="{{ site.baseurl }}/recent" class="{% if page.url == '/recent.html' %}current{% endif %}">Recent</a></li>
+        <li><a href="{{ "/" | prepend: site.baseurl }}/" class="{% if page.url == '/index.html' %}current{% endif %}">Search</a></li>
+        <li><a href="{{ "/recent" | prepend: site.baseurl }}/recent" class="{% if page.url == '/recent.html' %}current{% endif %}">Recent</a></li>
       </ul>
     </nav>
 
