@@ -3,8 +3,8 @@
 
 [{% for post in site.posts %}
   {
-    title: "{{ post.title }}",
-    category: "{{ post.category }}",
-    url: "{{ post.url }}"
-  } {% if forloop.last %}{% else %},{% endif %}
+    "title": "{{ post.title }}",
+    "category": "{{ post.category }}",
+    "url": "{{ post.url }}"
+  }{% if forloop.last %}{% else %},{% endif %}
 {% endfor %}]
