@@ -110,6 +110,32 @@ body:before
   width: 0
   vertical-align: middle
 
+input[type="search"]
+  width: 100%
+  padding-bottom: .2em
+  border: 0
+  font-family: "Source Code Pro"
+  font-size: 3em
+  -webkit-appearance: none
+  -moz-appearance: none
+  &:focus
+    outline: 0
+
+.not-front #search-form
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  padding: 2em
+  background: #fff
+  &.show
+    display: block
+  .empty-message
+    display: none
+
+
 @import "front"
 @import "typehead"
 @import "syntax-highlighter"

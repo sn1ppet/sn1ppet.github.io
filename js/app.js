@@ -9,7 +9,8 @@ $(document).ready(function() {
       var range = document.body.createTextRange();
       range.moveToElementText(element);
       range.select();
-    } else if (window.getSelection) {
+    }
+    else if (window.getSelection) {
       var range = document.createRange();
       range.selectNode(element);
       window.getSelection().removeAllRanges();
@@ -57,6 +58,26 @@ $(document).ready(function() {
     .on('typeahead:selected', function(obj, datum, name) {
       if (typeof datum.url !== 'undefined') {
         location.href = basePath + datum.url;
+      }
+    });
+
+    $(document).keyup(function(e) {
+      if ($('body').hasClass('front')) {
+        return;
+      }
+
+      var keyCode = e.which ? e.which : e.keyCode;
+      var $searchForm = $('#search-form');
+
+      // @todo
+      if ($searchForm.hasClass('show') && keyCode === 27) {
+        $searchForm.removeClass('show');
+      }
+      else if (e.target.id != 'search') {
+        var character = String.fromCharCode(e.keyCode);
+        $searchForm.addClass('show').find('#search').val(character).trigger('input').focus();
+
+        e.preventDefault();
       }
     });
 });
