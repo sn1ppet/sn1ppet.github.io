@@ -2,6 +2,7 @@
 published: true
 layout: post
 author: yannickoo
+title: drupal behaviors
 category: drupal
 ---
 Great for starting with new JavaScript file.
