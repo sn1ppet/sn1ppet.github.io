@@ -4,6 +4,29 @@ $(document).ready(function() {
 
   var basePath = '{{ site.baseurl }}';
 
+  var selectText = function(element) {
+    if (document.selection) {
+      var range = document.body.createTextRange();
+      range.moveToElementText(element);
+      range.select();
+    } else if (window.getSelection) {
+      var range = document.createRange();
+      range.selectNode(element);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+    }
+  };
+
+  $('.highlight').each(function() {
+    var $this = $(this);
+
+    $this.wrap('<div class="highlight-wrapper"></div>');
+    $('<button>Select</button>').appendTo($this.parent()).on('click', function() {
+      selectText($this[0]);
+    });
+
+  });
+
   var snippets = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
