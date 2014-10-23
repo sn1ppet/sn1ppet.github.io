@@ -1,6 +1,7 @@
 ---
 layout: post
 published: true
+author: axeger312
 title: responsive facebook widgets
 categories: css
 tags: [responsive, css, social media, facebook]

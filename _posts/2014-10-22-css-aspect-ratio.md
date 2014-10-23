@@ -1,6 +1,7 @@
 ---
 published: true
 layout: post
+author: axeger312
 category: css
 tags: [responsive, css]
 ---
