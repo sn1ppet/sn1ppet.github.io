@@ -13,7 +13,7 @@
   <body class="{% if page.url == '/index.html' %}front{% endif %}">
     <nav>
       <ul>
-        <li><a href="{{ "/" | prepend: site.baseurl }}/" class="{% if page.url == '/index.html' %}current{% endif %}">Search</a></li>
+        <li><a href="{{ "/" | prepend: site.baseurl }}" class="{% if page.url == '/index.html' %}current{% endif %}">Search</a></li>
         <li><a href="{{ "/recent.html" | prepend: site.baseurl }}" class="{% if page.url == '/recent.html' %}current{% endif %}">Recent</a></li>
       </ul>
     </nav>
