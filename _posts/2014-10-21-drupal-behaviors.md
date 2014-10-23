@@ -1,6 +1,7 @@
 ---
 published: true
 layout: post
+category: drupal
 ---
 Great for starting with new JavaScript file.
 

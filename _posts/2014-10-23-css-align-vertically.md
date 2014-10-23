@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: css align vertically
-categories:
+category: css
 tags: [example tag]
 ---
 

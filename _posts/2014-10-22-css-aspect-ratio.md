@@ -1,6 +1,7 @@
 ---
 published: true
 layout: post
+category: css
 ---
 Force a dom element to keep a specified aspect ratio. This is very helpful in responsive design.
 
