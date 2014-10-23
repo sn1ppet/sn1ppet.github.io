@@ -3,7 +3,7 @@ $(document).ready(function() {
   var snippets = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
-    prefetch: location.protocol + '//' + location.host + location.pathname + 'api/snippets.json'
+    prefetch: location.pathname + 'api/snippets.json'
   });
 
   snippets.initialize();
@@ -29,7 +29,7 @@ $(document).ready(function() {
     })
     .on('typeahead:selected', function(obj, datum, name) {
       if (typeof datum.url !== 'undefined') {
-        location.href = datum.url;
+        location.href = location.pathname.substr(0, location.pathname - 1) + datum.url;
       }
     });
 });
