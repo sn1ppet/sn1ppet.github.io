@@ -3,7 +3,7 @@ $(document).ready(function() {
   var snippets = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
-    prefetch: '../api/snippets.json'
+    prefetch: location.protocol + '//' + location.host + location.pathname + 'api/snippets.json'
   });
 
   snippets.initialize();
