@@ -1,6 +1,8 @@
+---
+---
 $(document).ready(function() {
 
-  var basePath = location.pathname.substr(0, location.pathname.length - 1);
+  var basePath = '{{ site.baseurl }}';
 
   var snippets = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
