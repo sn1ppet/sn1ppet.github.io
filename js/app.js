@@ -52,7 +52,9 @@ $(document).ready(function() {
           'Feel free to <a href="https://github.com/yannickoo/snippets/compare/">submit</a> a snippet.',
           '</div>'
         ].join('\n'),
-        suggestion: Handlebars.compile('<p><strong>{{title}}</strong> – {{category}}</p>')
+        suggestion: function(data){
+          return '<p><strong>' + data.title + '</strong> - ' + data.category+ '</p>';
+        }
       }
     })
     .on('typeahead:selected', function(obj, datum, name) {
