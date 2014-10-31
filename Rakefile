@@ -15,10 +15,10 @@ task :post do
         f << <<-EOS.gsub(/^     /, '')
 ---
 layout: post
-published: false
+published: true
 title: #{title}
-categories:
-tags: [example tag]
+categories: various
+tags: [example tag1, example tag2]
 ---
 
         EOS
