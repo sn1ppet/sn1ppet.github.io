@@ -75,9 +75,12 @@ $(document).ready(function() {
       if ($searchForm.hasClass('show') && keyCode === 27) {
         $searchForm.removeClass('show');
       }
-      else if (e.target.id != 'search') {
+      else if (!e.target.classList.contains('typeahead')) {
         var character = String.fromCharCode(e.keyCode);
-        $searchForm.addClass('show').find('#search').val(character).trigger('input').focus();
+
+        if (character.match(/[a-z0-9]/gi)) {
+          $searchForm.addClass('show').find('.tt-input').val(character).trigger('input').focus();
+        }
 
         e.preventDefault();
       }
