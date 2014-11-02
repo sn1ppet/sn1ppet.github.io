@@ -61,7 +61,7 @@ $(document).ready(function() {
       if (typeof datum.url !== 'undefined') {
         location.href = basePath + datum.url;
       }
-    });
+    }).focus();
 
     $(document).keyup(function(e) {
       if ($('body').hasClass('front')) {
@@ -75,10 +75,10 @@ $(document).ready(function() {
       if ($searchForm.hasClass('show') && keyCode === 27) {
         $searchForm.removeClass('show');
       }
-      else if (!e.target.classList.contains('typeahead')) {
+      else if (['INPUT', 'TEXTAREA'].indexOf(e.target.nodeName) === -1) {
         var character = String.fromCharCode(e.keyCode);
 
-        if (character.match(/[a-z0-9]/gi)) {
+        if (character.match(/[a-z0-9]/i)) {
           $searchForm.addClass('show').find('.tt-input').val(character).trigger('input').focus();
         }
 
