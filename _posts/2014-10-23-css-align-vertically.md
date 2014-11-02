@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-author: axeger312
+author: axe312ger
 title: css align vertically
 category: css
 tags: [example tag]

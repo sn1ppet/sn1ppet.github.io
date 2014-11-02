@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-author: axeger312
+author: axe312ger
 title: css aspect ratio
 category: css
 tags: [responsive, css]

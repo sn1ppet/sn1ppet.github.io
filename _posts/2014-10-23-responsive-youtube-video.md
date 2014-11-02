@@ -1,6 +1,7 @@
 ---
 layout: post
 published: true
+author: axe312ger
 title: responsive youtube video
 categories: css
 tags: [responsive, css, social media, youtube]
