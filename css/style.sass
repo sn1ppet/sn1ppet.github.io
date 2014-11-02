@@ -150,6 +150,31 @@ article.post
       text-decoration: none
       color: #000
 
+  // Snippet link styling
+  .post-content a
+    color: #3D8CD9
+
+    &:after
+      content: '\f05c'
+      display: inline-block
+
+      padding-left: 0.3em
+
+      font: normal normal normal 0.85em/1 octicons
+
+      text-decoration: none
+      text-rendering: auto
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+    &[href^="http://"]
+      &:after
+        content: '\f07f'
+
 @import "front"
 @import "typehead"
 @import "syntax-highlighter"
