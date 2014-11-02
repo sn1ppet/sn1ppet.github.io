@@ -1,3 +1,6 @@
 [submodule "lib/caniuse-widget"]
 	path = lib/caniuse-widget
 	url = https://github.com/axe312ger/caniuse-widget.git
+[submodule "lib/octicons"]
+	path = lib/octicons
+	url = https://github.com/github/octicons.git
