@@ -49,7 +49,7 @@ $(document).ready(function() {
       templates: {
         empty: [
           '<div class="empty-message">',
-          'Feel free to <a href="https://github.com/yannickoo/snippets/compare/">submit</a> a snippet.',
+          'Feel free to <a href="https://github.com/sn1ppet/sn1ppet.github.io/new/master/_posts">submit</a> a snippet.',
           '</div>'
         ].join('\n'),
         suggestion: function(data){
