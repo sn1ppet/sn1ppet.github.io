@@ -1,0 +1,12 @@
+{
+  "name": "sn1ppet",
+  "version": "0.0.0",
+  "homepage": "https://github.com/sn1ppet/sn1ppet.github.io",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "handlebars": "~2.0.0",
+    "typeahead.js": "~0.10.5",
+    "MathJax": "~2.4.0"
+  }
+}
