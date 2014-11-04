@@ -1,0 +1,19 @@
+---
+layout: default
+title: Categories
+---
+<h1>All categories</h1>
+<ul>
+  {% assign current_category = none %}
+  {% for post in site.posts %}
+    {% if current_category != post.category %}
+      {% assign current_category = post.category %}
+      </ul>
+        <strong>{{ current_category }}</strong>
+      <ul>
+    {% endif %}
+    <li>
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
