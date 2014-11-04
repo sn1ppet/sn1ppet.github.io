@@ -22,7 +22,7 @@ $(document).ready(function() {
     var $this = $(this);
 
     $this.wrap('<div class="highlight-wrapper"></div>');
-    $('<button>Select</button>').appendTo($this.parent()).on('click', function() {
+    $('<button><span class="octicon octicon-clippy"></span</button>').appendTo($this.parent()).on('click', function() {
       selectText($this[0]);
     });
 
