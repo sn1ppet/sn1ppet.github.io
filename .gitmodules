@@ -1,0 +1,6 @@
+[submodule "libraries/caniuse-widget"]
+	path = libraries/caniuse-widget
+	url = https://github.com/axe312ger/caniuse-widget.git
+[submodule "libraries/octicons"]
+	path = libraries/octicons
+	url = https://github.com/github/octicons.git
