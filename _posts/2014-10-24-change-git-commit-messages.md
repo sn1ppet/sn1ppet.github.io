@@ -2,7 +2,7 @@
 layout: post
 published: true
 author: axe312ger
-title: change git commit messages
+title: Change Git commit messages
 categories: cli
 tags: [git, cli, versioning]
 ---
@@ -10,13 +10,13 @@ tags: [git, cli, versioning]
 
 # Change your last commit message
 {% highlight bash lineos %}
-	git commit --amend -m "Your new message"
+git commit --amend -m "Your new message"
 {% endhighlight %}
 
 # Change messages of multiple commits
 
 {% highlight bash lineos %}
-	git rebase -i HEAD~4
+git rebase -i HEAD~4
 {% endhighlight %}
 
 [More details](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html)

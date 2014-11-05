@@ -2,7 +2,7 @@
 layout: post
 published: true
 author: axe312ger
-title: css align vertically
+title: CSS align vertically
 category: css
 tags: [example tag]
 ---

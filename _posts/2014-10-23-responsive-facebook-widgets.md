@@ -2,7 +2,7 @@
 layout: post
 published: true
 author: axe312ger
-title: responsive facebook widgets
+title: Responsive facebook widgets
 categories: css
 tags: [responsive, css, social media, facebook]
 ---

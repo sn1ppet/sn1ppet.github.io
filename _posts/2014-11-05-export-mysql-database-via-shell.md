@@ -7,5 +7,5 @@ category: cli
 ---
 
 {% highlight bash lineos %}
-mysqldump -u USERNAME -p DATABASE | gzip > backup.sql.gz
+mysqldump -u USERNAME -p DATABASE | gzip > dump.sql.gz
 {% endhighlight %}

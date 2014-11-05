@@ -7,5 +7,5 @@ category: cli
 ---
 
 {% highlight bash lineos %}
-	cat ~/.ssh/id_rsa.pub | ssh USER@HOST "cat - >> ~/.ssh/authorized_keys"
+cat ~/.ssh/id_rsa.pub | ssh USER@HOST "cat - >> ~/.ssh/authorized_keys"
 {% endhighlight %}
