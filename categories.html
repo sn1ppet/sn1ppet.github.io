@@ -4,16 +4,7 @@ title: Categories
 ---
 
 <ul>
-  {% assign current_category = none %}
-  {% for post in site.posts %}
-    {% if current_category != post.category %}
-      {% assign current_category = post.category %}
-      </ul>
-        <strong>{{ current_category }}</strong>
-      <ul>
-    {% endif %}
-    <li>
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </li>
+  {% for category in site.categories %}
+  <li>{{ category | first }} <small>({{ category | first | size }})</small></li>
   {% endfor %}
 </ul>
