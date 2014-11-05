@@ -2,7 +2,7 @@
 layout: post
 published: true
 author: yannickoo
-title: Displays hidden files on a Mac
+title: Display hidden files on a Mac
 category: cli
 ---
 
