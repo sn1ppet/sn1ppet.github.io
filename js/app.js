@@ -1,9 +1,6 @@
----
----
 $(document).ready(function() {
 
-  var basePath = '{{ site.baseurl }}';
-
+  // Text selector
   var selectText = function(element) {
     if (document.selection) {
       var range = document.body.createTextRange();
@@ -18,6 +15,7 @@ $(document).ready(function() {
     }
   };
 
+  // Highlight button
   $('.highlight').each(function() {
     var $this = $(this);
 
@@ -28,6 +26,7 @@ $(document).ready(function() {
 
   });
 
+  // Typeahead
   var snippets = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -63,26 +62,27 @@ $(document).ready(function() {
       }
     }).focus();
 
-    $(document).keyup(function(e) {
-      if ($('body').hasClass('front')) {
-        return;
+  // Global key watcher
+  $(document).keyup(function(e) {
+    if ($('body').hasClass('front')) {
+      return;
+    }
+
+    var keyCode = e.which ? e.which : e.keyCode;
+    var $searchForm = $('#search-form');
+
+    // @todo
+    if ($searchForm.hasClass('show') && keyCode === 27) {
+      $searchForm.removeClass('show');
+    }
+    else if (['INPUT', 'TEXTAREA'].indexOf(e.target.nodeName) === -1) {
+      var character = String.fromCharCode(e.keyCode);
+
+      if (character.match(/[a-z0-9]/i)) {
+        $searchForm.addClass('show').find('.tt-input').val(character).trigger('input').focus();
       }
 
-      var keyCode = e.which ? e.which : e.keyCode;
-      var $searchForm = $('#search-form');
-
-      // @todo
-      if ($searchForm.hasClass('show') && keyCode === 27) {
-        $searchForm.removeClass('show');
-      }
-      else if (['INPUT', 'TEXTAREA'].indexOf(e.target.nodeName) === -1) {
-        var character = String.fromCharCode(e.keyCode);
-
-        if (character.match(/[a-z0-9]/i)) {
-          $searchForm.addClass('show').find('.tt-input').val(character).trigger('input').focus();
-        }
-
-        e.preventDefault();
-      }
-    });
+      e.preventDefault();
+    }
+  });
 });
