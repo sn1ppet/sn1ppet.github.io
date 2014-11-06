@@ -10,23 +10,24 @@ tags: [example tag]
 Align elements vertically can be tricky. Here are several tricks you can use.
 
 # Inline block without wrapping
-{% highlight css lineos %}
-.wrapper {
-  white-space: nowrap
-}
 
-.wrapper > * {
-  white-space: normal
-  vertical-align: middle
-}
-
-.wrapper:before {
-  content: ''
-  display: inline-block
-  height: 100%
-  width: 0
-}
-{% endhighlight %}
+{% include ace-editor.html mode="css" %}
+    .wrapper {
+      white-space: nowrap;
+    }
+    
+    .wrapper > * {
+      white-space: normal;
+      vertical-align: middle;
+    }
+    
+    .wrapper:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      width: 0;
+    }
+{% include closingdiv.html %}
 
 ## Browser support
 

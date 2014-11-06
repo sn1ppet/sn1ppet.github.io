@@ -85,4 +85,16 @@ $(document).ready(function() {
       e.preventDefault();
     }
   });
+
+  // Ace editor
+  $('.ace-editor').each(function () {
+    var editor = ace.edit(this);
+    editor.getSession().setMode('ace/mode/' + $(this).attr('data-mode'));
+    editor.setTheme('ace/theme/monokai');
+    editor.setOptions({
+      minLines: 3,
+      maxLines: 20,
+      tabSize: 2
+    });
+  });
 });
