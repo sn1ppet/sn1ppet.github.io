@@ -17,7 +17,7 @@ task :post do
 layout: post
 published: true
 title: #{title}
-categories: various
+category: various
 tags: [example tag1, example tag2]
 ---
 
