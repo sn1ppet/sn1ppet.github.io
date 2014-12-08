@@ -3,7 +3,7 @@ published: true
 layout: post
 author: yannickoo
 title: Scale videos so that they can fit in their container
-category: drupal
+category: javascript
 ---
 When you want to scale videos so that they can fit in their container.
 
