@@ -2,7 +2,7 @@
 published: true
 layout: post
 author: yannickoo
-title: remove drupal's generator metatag
+title: Remove Drupal's generator metatag
 category: mysql
 ---
 When you want to remove Drupal's generator metatag.
