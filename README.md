@@ -27,4 +27,4 @@ Even if you want to have all *your* snippets there just [fork](https://github.co
 
 ## Contribute
 
-Do you want to submit a great snippet? Check out the [contributing](https://github.com/sn1ppet/sn1ppet.github.io/blob/master/CONTRIBUTING.md) page.
+Do you want to submit a great snippet? Check out the [contributing](https://github.com/h-w-z/snippets/blob/gh-pages/CONTRIBUTING.md) page.
