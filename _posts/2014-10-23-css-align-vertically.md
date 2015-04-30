@@ -17,6 +17,7 @@ Align elements vertically can be tricky. Here are several tricks you can use.
 }
 
 .wrapper > * {
+  display: inline-block;
   white-space: normal;
   vertical-align: middle;
 }
