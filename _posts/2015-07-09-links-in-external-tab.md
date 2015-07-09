@@ -9,7 +9,7 @@ category: drupal
 You need it everytime when your client needs it.
 
 {% highlight js lineos %}
-$('a').each(function() {
+$('a[href]').each(function() {
   var a = new RegExp('/' + window.location.host + '/');
   if (!a.test(this.href)) {
     $(this).click(function(e) {
