@@ -14,8 +14,12 @@ $(document).ready(function() {
       window.getSelection().addRange(range);
     }
   };
-
-  selectText($('.highlight:first')[0]);
+  
+  // Select first code snippet automatically.
+  var $codeSnippet = $('.highlight:first');
+  if ($codeSnippet.length) {
+    selectText($codeSnippet[0]);
+  }
 
   // Highlight button
   $('.highlight').each(function() {
