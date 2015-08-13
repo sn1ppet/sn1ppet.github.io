@@ -14,12 +14,6 @@ $(document).ready(function() {
       window.getSelection().addRange(range);
     }
   };
-  
-  // Select first code snippet automatically.
-  var $codeSnippet = $('.highlight:first');
-  if ($codeSnippet.length) {
-    selectText($codeSnippet[0]);
-  }
 
   // Highlight button
   $('.highlight').each(function() {
@@ -103,4 +97,10 @@ $(document).ready(function() {
       tabSize: 2
     });
   });
+  
+  // Select first code snippet automatically.
+  var $codeSnippet = $('.highlight:first');
+  if ($codeSnippet.length) {
+    selectText($codeSnippet[0]);
+  }
 });
