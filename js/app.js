@@ -15,6 +15,8 @@ $(document).ready(function() {
     }
   };
 
+  selectText($('.highlight:first')[0]);
+
   // Highlight button
   $('.highlight').each(function() {
     var $this = $(this);
