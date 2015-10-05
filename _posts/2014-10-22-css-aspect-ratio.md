@@ -14,7 +14,7 @@ This relies on the relation of the padding parameter to the elements width.
 
 Here is an example how to calculate the percentage of the padding bottom for a 16:9 aspect ratio.
 
-\\[16:9 = \frac{9}{16} * 100 \\]
+\\[16:9 ≙ \frac{9}{16} * 100 \\]
 
 ### Example ratios:
 * 1:1 ≙ 100%
