@@ -12,6 +12,7 @@ To make the youtube video iframe responsive, just force a wrapping container to 
 # css
 {% highlight css lineos %}
 .video-wrapper {
+  position: relative;
   width: 100%;
   height: 0;
   padding-bottom: 75%; /* default youtube aspect ratio */
