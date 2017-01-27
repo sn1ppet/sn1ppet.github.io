@@ -9,5 +9,5 @@ Great for requirement checks in bash.
 Just run and check the exit code.
 
 {% highlight sh lineos %}
-  python -m package.submodule > /dev/null 2>&1
+python -m package.submodule > /dev/null 2>&1
 {% endhighlight %}
