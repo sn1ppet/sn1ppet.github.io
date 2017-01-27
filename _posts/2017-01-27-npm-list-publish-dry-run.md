@@ -9,5 +9,5 @@ Great for debugging `.npmignore`
 (It generates a tarball in your module folder!)
 
 {% highlight sh lineos %}
-  tar -tf $(npm pack)
+tar -tf $(npm pack)
 {% endhighlight %}
